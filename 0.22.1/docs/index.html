@@ -1464,11 +1464,8 @@
 
             <p><small>Added in v0.6.0</small></p>
 
-            <div class="description"><p>A special placeholder value used to specify "gaps" within curried functions,
-allowing partial application of any combination of arguments, regardless of
-their positions.</p>
-<p>If <code>g</code> is a curried ternary function and <code>_</code> is <code>R.__</code>, the following are
-equivalent:</p>
+            <div class="description"><p>一个特殊的占位符用于详细说明"gaps"在柯里化函数里面的值，允许参数的任何组合的部分应用，无论他们的位置。</p>
+<p>如果<code>g</code>柯里化的三元函数并且<code>_</code>是<code>R.__</code>，则以下是等价的：</p>
 <ul>
 <li><code>g(1, 2, 3)</code></li>
 <li><code>g(_, 2, 3)(1)</code></li>
@@ -1525,7 +1522,7 @@ greet(<span class="hljs-string">'Alice'</span>); <span class="hljs-comment">//=&
 
             <p><small>Added in v0.1.0</small></p>
 
-            <div class="description"><p>Adds two values.</p>
+            <div class="description"><p>两个值相加。</p>
 </div>
 
 
@@ -1573,13 +1570,9 @@ R.add(<span class="hljs-number">7</span>)(<span class="hljs-number">10</span>); 
 
             <p><small>Added in v0.15.0</small></p>
 
-            <div class="description"><p>Creates a new list iteration function from an existing one by adding two new
-parameters to its callback function: the current index, and the entire list.</p>
-<p>This would turn, for instance, Ramda's simple <code>map</code> function into one that
-more closely resembles <code>Array.prototype.map</code>. Note that this will only work
-for functions in which the iteration callback function is the first
-parameter, and where the list is the last parameter. (This latter might be
-unimportant if the list parameter is not used.)</p>
+            <div class="description"><p>创建一个新的列表迭代函数通过现有的一个通过添加两个新参数的回调函数：当前指数，和整个列表。</p>
+<p>这将使例如简单的Ramda<code>map</code>变为
+更相似<code>Array.prototype.map</code>。注意：这将只用在迭代回调函数是第一个参数的函数里，并且最后一个参数是列表。(如果不使用列表参数，则后者可能是不重要的。)</p>
 </div>
 
 
@@ -1639,10 +1632,7 @@ mapIndexed((val, idx) =&gt; idx + <span class="hljs-string">'-'</span> + val, [<
 
             <p><small>Added in v0.14.0</small></p>
 
-            <div class="description"><p>Applies a function to the value at the given index of an array, returning a
-new copy of the array with the element at the given index replaced with the
-result of the function application.</p>
-</div>
+            <div class="description"><p>应用函数到数组给定的索引中的值，返回一个数组的新副本，该数组元素是给定的索引中替换为应用的函数的结果。</p></div>
 
 
 
@@ -1696,10 +1686,9 @@ R.adjust(R.add(<span class="hljs-number">10</span>))(<span class="hljs-number">1
 
             <p><small>Added in v0.1.0</small></p>
 
-            <div class="description"><p>Returns <code>true</code> if all elements of the list match the predicate, <code>false</code> if
-there are any that don't.</p>
-<p>Dispatches to the <code>all</code> method of the second argument, if present.</p>
-<p>Acts as a transducer if a transformer is given in list position.</p>
+            <div class="description"><p>返回<code>true</code>如果所有的列表元素和断言匹配, <code>false</code>如果有任何不匹配。</p>
+<p>在第二个参数调用<code>all</code>，如果存在的话。</p>
+<p>如果变压器在列表中，则作为一个传感器。</p>
 </div>
 
 
@@ -1749,12 +1738,12 @@ R.all(lessThan3)([<span class="hljs-number">1</span>, <span class="hljs-number">
 
             <p><small>Added in v0.9.0</small></p>
 
-            <div class="description"><p>Takes a list of predicates and returns a predicate that returns true for a
-given list of arguments if every one of the provided predicates is satisfied
-by those arguments.</p>
-<p>The function returned is a curried function whose arity matches that of the
-highest-arity predicate.</p>
-</div>
+            <div class="description"><p>取得一个断言列表并返回一个断言that如果每个提供的断言都满足这些参数，则给定的参数列表返回true，</p>
+<p>函数返回的是一个柯里函数匹配数量
+最高的断言</p>
+取一组谓词和谓词，返回一个返回给定参数列表如果提供的谓词的每一的论点满意。
+
+函数返回的是一个咖喱函数的数量相匹配的最高数量的谓词。</div>
 
 
 
@@ -1805,10 +1794,8 @@ isQueenOfSpades({rank: <span class="hljs-string">'Q'</span>, suit: <span class="
 
             <p><small>Added in v0.1.0</small></p>
 
-            <div class="description"><p>Returns a function that always returns the given value. Note that for
-non-primitives the value returned is a reference to the original value.</p>
-<p>This function is known as <code>const</code>, <code>constant</code>, or <code>K</code> (for K combinator) in
-other languages and libraries.</p>
+            <div class="description"><p>返回一个总是返回给定值的函数。注意，非原语返回的值是一个参考的原始值。</p>
+<p>在别的语言和文档里，这一函数被称为<code>const</code>、<code>constant</code>或<code>K</code> (K组合)。</p>
 </div>
 
 
@@ -1858,7 +1845,7 @@ t(); <span class="hljs-comment">//=&gt; 'Tee'</span></code></pre>
 
             <p><small>Added in v0.1.0</small></p>
 
-            <div class="description"><p>Returns <code>true</code> if both arguments are <code>true</code>; <code>false</code> otherwise.</p>
+            <div class="description"><p>返回<code>true</code>如果两个参数都是正<code>true</code>；否则返回<code>false</code></p>
 </div>
 
 
@@ -1915,10 +1902,9 @@ R.and(<span class="hljs-literal">false</span>, <span class="hljs-literal">false<
 
             <p><small>Added in v0.1.0</small></p>
 
-            <div class="description"><p>Returns <code>true</code> if at least one of elements of the list match the predicate,
-<code>false</code> otherwise.</p>
-<p>Dispatches to the <code>any</code> method of the second argument, if present.</p>
-<p>Acts as a transducer if a transformer is given in list position.</p>
+            <div class="description"><p>返回<code>true</code>如果表单的元素至少有一个和断言匹配，<code>false</code> otherwise.</p>
+<p>在第二个参数调用<code>any</code> ，如果有的话。</p>
+<p>如果一个变压器在列表中的位置，那么将他作为一个传感器。</p>
 </div>
 
 
@@ -1968,11 +1954,9 @@ R.any(lessThan2)([<span class="hljs-number">1</span>, <span class="hljs-number">
 
             <p><small>Added in v0.9.0</small></p>
 
-            <div class="description"><p>Takes a list of predicates and returns a predicate that returns true for a
-given list of arguments if at least one of the provided predicates is
-satisfied by those arguments.</p>
-<p>The function returned is a curried function whose arity matches that of the
-highest-arity predicate.</p>
+            <div class="description"><p>获取一个断言列表并返回一个断言，如果所提供的断言至少有一个是这些参数满足的，则以一个给定参数列表返回true。</p>
+<p>函数返回的是一个柯里函数匹配数量
+最高的断言</p>
 </div>
 
 
@@ -2030,10 +2014,8 @@ gte(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>); <sp
 
             <p><small>Added in v0.3.0</small></p>
 
-            <div class="description"><p>ap applies a list of functions to a list of values.</p>
-<p>Dispatches to the <code>ap</code> method of the second argument, if present. Also
-treats curried functions as applicatives.</p>
-</div>
+            <div class="description"><p>ap应用一个函数列表中的值。</p>
+<p>在第二个参数调用<code>ap</code>方法，如果存在，并把柯里函数作为函子</p></div>
 
 
 
@@ -2313,10 +2295,7 @@ getMetrics(<span class="hljs-number">2</span>, <span class="hljs-number">4</span
 
             <p><small>Added in v0.8.0</small></p>
 
-            <div class="description"><p>Makes a shallow clone of an object, setting or overriding the specified
-property with the given value. Note that this copies and flattens prototype
-properties onto the new object as well. All non-primitive properties are
-copied by reference.</p>
+            <div class="description"><p>浅克隆一个对象，设置或重写给定值的指定属性。要注意的是，这个副本原有的原型特性在新的对象上，以及所有非原始属性都是通过引用复制的。</p>
 </div>
 
 
@@ -2375,11 +2354,7 @@ copied by reference.</p>
 
             <p><small>Added in v0.8.0</small></p>
 
-            <div class="description"><p>Makes a shallow clone of an object, setting or overriding the nodes required
-to create the given path, and placing the specific value at the tail end of
-that path. Note that this copies and flattens prototype properties onto the
-new object as well. All non-primitive properties are copied by reference.</p>
-</div>
+            <div class="description"><p>浅克隆一个对象，设置或重写创建给定路径所需的节点，并将该特定值放置在该路径的尾部。要注意的是，这个副本原有的原型特性在新的对象上，以及所有非原始属性都是通过引用复制的。</p></div>
 
 
 
@@ -2866,16 +2841,14 @@ R.sort(cmp, people);</code></pre>
 
             <p><small>Added in v0.12.0</small></p>
 
-            <div class="description"><p>Takes a function <code>f</code> and returns a function <code>g</code> such that:</p>
+            <div class="description"><p>取得函数<code>f</code>并返回函数<code>g</code>以至：</p>
 <ul>
-<li><p>applying <code>g</code> to zero or more arguments will give <strong>true</strong> if applying
-the same arguments to <code>f</code> gives a logical <strong>false</strong> value; and</p>
+<li><p>使<code>g</code>为零或函数为<strong>true</strong>，如果将同的函数用在<code>f</code>则为<strong>false</strong>值；</p>
 </li>
-<li><p>applying <code>g</code> to zero or more arguments will give <strong>false</strong> if applying
-the same arguments to <code>f</code> gives a logical <strong>true</strong> value.</p>
+<li><p>使<code>g</code>为零或函数为<strong>false</strong>，如果将同样的函数用在<code>f</code>则为<strong>true</strong>值。</p>
 </li>
 </ul>
-<p><code>R.complement</code> will work on all other functors as well.</p>
+<p><code>R.complement</code>也将工作在其他所有函子上</p>
 </div>
 
 
@@ -2923,9 +2896,8 @@ isOdd(<span class="hljs-number">42</span>); <span class="hljs-comment">//=&gt; f
 
             <p><small>Added in v0.1.0</small></p>
 
-            <div class="description"><p>Performs right-to-left function composition. The rightmost function may have
-any arity; the remaining functions must be unary.</p>
-<p><strong>Note:</strong> The result of compose is not automatically curried.</p>
+            <div class="description"><p>执行从右到左的函数撰写。最右边的函数可以有任意数量；其余的函数必须为一元。</p>
+<p><strong>注意：</strong> 撰写的结果不会自动柯里化。</p>
 </div>
 
 
@@ -3480,20 +3452,15 @@ R.countBy(R.toLower)(letters);   <span class="hljs-comment">//=&gt; {'a': 5, 'b'
 
             <p><small>Added in v0.1.0</small></p>
 
-            <div class="description"><p>Returns a curried equivalent of the provided function. The curried function
-has two unusual capabilities. First, its arguments needn't be provided one
-at a time. If <code>f</code> is a ternary function and <code>g</code> is <code>R.curry(f)</code>, the
-following are equivalent:</p>
+            <div class="description"><p>返回一个柯里相当于所提供的函数，柯里函数有两个不同寻常的功能。首先，此函数不需要一次提供一个。如果<code>f</code>是一个三元函数并且<code>g</code>是<code>R.curry(f)</code>，则以下是等价的：</p>
 <ul>
 <li><code>g(1)(2)(3)</code></li>
 <li><code>g(1)(2, 3)</code></li>
 <li><code>g(1, 2)(3)</code></li>
 <li><code>g(1, 2, 3)</code></li>
 </ul>
-<p>Secondly, the special placeholder value <code>R.__</code> may be used to specify
-"gaps", allowing partial application of any combination of arguments,
-regardless of their positions. If <code>g</code> is as above and <code>_</code> is <code>R.__</code>, the
-following are equivalent:</p>
+<p>其次，特殊的占位符值<code>R.__</code>可用于指定的“空白”，允许部分应用任何函数组合，
+无论他们的位置。如果<code>g</code>同上并且<code>_</code>是<code>R.__</code>，则以下是等价的：</p>
 <ul>
 <li><code>g(1, 2, 3)</code></li>
 <li><code>g(_, 2, 3)(1)</code></li>
@@ -3685,8 +3652,7 @@ g(<span class="hljs-number">4</span>); <span class="hljs-comment">//=&gt; 10</sp
 
             <p><small>Added in v0.10.0</small></p>
 
-            <div class="description"><p>Returns the second argument if it is not <code>null</code>, <code>undefined</code> or <code>NaN</code>
-otherwise the first argument is returned.</p>
+            <div class="description"><p>返回第二个参数如果第二个参数不是<code>null</code>、<code>undefined</code>或<code>NaN</code>，否则返回第一个参数。</p>
 </div>
 
 
@@ -3740,9 +3706,7 @@ defaultTo42(<span class="hljs-built_in">parseInt</span>(<span class="hljs-string
 
             <p><small>Added in v0.1.0</small></p>
 
-            <div class="description"><p>Finds the set (i.e. no duplicates) of all elements in the first list not
-contained in the second list.</p>
-</div>
+            <div class="description"><p>查找不包含在第二个列表中的第一个列表中的所有元素的集合（即无重复）。</p></div>
 
 
 
@@ -3863,8 +3827,7 @@ R.differenceWith(cmp, l1, l2); <span class="hljs-comment">//=&gt; [{a: 1}, {a: 2
 
             <p><small>Added in v0.10.0</small></p>
 
-            <div class="description"><p>Returns a new object that does not contain a <code>prop</code> property.</p>
-</div>
+            <div class="description"><p>返回一个不包含 <code>prop</code> 属性的新对象。</p></div>
 
 
 
@@ -4650,11 +4613,9 @@ R.equals(a, b); <span class="hljs-comment">//=&gt; true</span></code></pre>
 
             <p><small>Added in v0.9.0</small></p>
 
-            <div class="description"><p>Creates a new object by recursively evolving a shallow copy of <code>object</code>,
-according to the <code>transformation</code> functions. All non-primitive properties
-are copied by reference.</p>
-<p>A <code>transformation</code> function will not be invoked if its corresponding key
-does not exist in the evolved object.</p>
+            <div class="description"><p>通过递归地演化对象的浅拷贝来创建一个新的<code>object</code>，
+根据<code>transformation</code> 函数。所有未被复制的属性都被引用。</p>
+<p>如果<code>transformation</code>函数的相应的键不存在于改进的对象中，它将不会被调用。</p>
 </div>
 
 
@@ -4752,12 +4713,9 @@ R.evolve(transformations, tomato); <span class="hljs-comment">//=&gt; {firstName
 
             <p><small>Added in v0.1.0</small></p>
 
-            <div class="description"><p>Takes a predicate and a "filterable", and returns a new filterable of the
-same type containing the members of the given filterable which satisfy the
-given predicate.</p>
-<p>Dispatches to the <code>filter</code> method of the second argument, if present.</p>
-<p>Acts as a transducer if a transformer is given in list position.</p>
-</div>
+            <div class="description"><p>取得断言和“过滤”, 并返回一个新的包含相同类型分子的特定过滤，以满足给定的断言。</p>
+<p>在第二个参数调用<code>filter</code>方法，如果存在的话</p>
+<p>作为一个传感器如果变压器在列表位置。</p></div>
 
 
 
@@ -5045,8 +5003,7 @@ R.findLastIndex(R.propEq(<span class="hljs-string">'a'</span>, <span class="hljs
 
             <p><small>Added in v0.1.0</small></p>
 
-            <div class="description"><p>Returns a new list by pulling every item out of it (and all its sub-arrays)
-and putting them in a new array, depth-first.</p>
+            <div class="description"><p>通过将每一个项目（及其子数组）拉出来并返回一个新的列表，然后将它们放在一个新的数组中，深度优先。</p>
 </div>
 
 
@@ -5208,8 +5165,7 @@ R.forEach(printXPlusFive, [<span class="hljs-number">1</span>, <span class="hljs
 
             <p><small>Added in v0.3.0</small></p>
 
-            <div class="description"><p>Creates a new object from a list key-value pairs. If a key appears in
-multiple pairs, the rightmost pair is included in the object.</p>
+            <div class="description"><p>从一个列表键值对创建一个新的对象。如果一个键出现在多个对中，那么最右边的一对被包含在对象中。</p>
 </div>
 
 
@@ -5264,11 +5220,9 @@ multiple pairs, the rightmost pair is included in the object.</p>
 
             <p><small>Added in v0.1.0</small></p>
 
-            <div class="description"><p>Splits a list into sub-lists stored in an object, based on the result of
-calling a String-returning function on each element, and grouping the
-results according to values returned.</p>
-<p>Dispatches to the <code>groupBy</code> method of the second argument, if present.</p>
-<p>Acts as a transducer if a transformer is given in list position.</p>
+            <div class="description"><p>将一个列表拆分成存储在一个对象中的子列表，基于调用每个元素上的字符串返回函数的结果，并根据返回的值对结果进行分组。</p>
+<p>在第二个参数调用<code>groupBy</code>方法，如果存在的话</p>
+<p>作为一个传感器如果变压器在列表位置。</p>
 </div>
 
 
@@ -5508,8 +5462,7 @@ R.gte(<span class="hljs-string">'z'</span>, <span class="hljs-string">'a'</span>
 
             <p><small>Added in v0.7.0</small></p>
 
-            <div class="description"><p>Returns whether or not an object has an own property with the specified name</p>
-</div>
+            <div class="description"><p>返回一个对象不管是否有一个具有指定名称的自己的属性</p></div>
 
 
 
@@ -5619,8 +5572,7 @@ R.hasIn(<span class="hljs-string">'area'</span>, square);  <span class="hljs-com
 
             <p><small>Added in v0.1.0</small></p>
 
-            <div class="description"><p>Returns the first element of the given list or string. In some libraries
-this function is named <code>first</code>.</p>
+            <div class="description"><p>返回给定列表或字符串的第一个元素。在一些库中，这个函数被命名为<code>first</code>.</p>
 </div>
 
 
@@ -5727,8 +5679,7 @@ R.identical(<span class="hljs-literal">NaN</span>, <span class="hljs-literal">Na
 
             <p><small>Added in v0.1.0</small></p>
 
-            <div class="description"><p>A function that does nothing but return the parameter supplied to it. Good
-as a default or placeholder function.</p>
+            <div class="description"><p>一个函数，只返回提供给它的参数。很好地作为默认值或者占位符函数。</p>
 </div>
 
 
@@ -6589,8 +6540,7 @@ sliceFrom6(<span class="hljs-number">8</span>, <span class="hljs-string">'abcdef
 
             <p><small>Added in v0.3.0</small></p>
 
-            <div class="description"><p>See if an object (<code>val</code>) is an instance of the supplied constructor. This
-function will check up the inheritance chain, if any.</p>
+            <div class="description"><p>查看如果一个对象(<code>val</code>)是一个提供构造函数的实例。如果有继承链，这个函数将检查继承链。</p>
 </div>
 
 
@@ -6888,11 +6838,11 @@ getRange(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>,
 
             <p><small>Added in v0.1.0</small></p>
 
-            <div class="description"><p>Returns a list containing the names of all the enumerable own properties of
-the supplied object.
+            <div class="description"><p>返回一个列表包含所提供的对象的所有枚举的属性的名称。
 Note that the order of the output array is not guaranteed to be consistent
 across different JS platforms.</p>
-</div>
+返回一个列表包含所提供的对象的所有枚举的属性的名称。注意，输出数组的顺序不一定在不同的JS平台是一致的。
+请注意，输出数组的顺序不保证是一致的</div>
 
 
 
@@ -6982,8 +6932,7 @@ R.keysIn(f); <span class="hljs-comment">//=&gt; ['x', 'y']</span></code></pre>
 
             <p><small>Added in v0.1.4</small></p>
 
-            <div class="description"><p>Returns the last element of the given list or string.</p>
-</div>
+            <div class="description"><p>返回给定的列表或字符串最后的元素。</p></div>
 
 
 
@@ -7091,7 +7040,7 @@ R.lastIndexOf(<span class="hljs-number">10</span>, [<span class="hljs-number">1<
 
             <p><small>Added in v0.3.0</small></p>
 
-            <div class="description"><p>Returns the number of elements in the array by returning <code>list.length</code>.</p>
+            <div class="description"><p>返回在数组中元素的数量，通过返回<code>list.length</code>.</p>
 </div>
 
 
@@ -7353,8 +7302,7 @@ R.over(xLens, R.negate, {x: <span class="hljs-number">1</span>, y: <span class="
 
             <p><small>Added in v0.7.0</small></p>
 
-            <div class="description"><p>"lifts" a function of arity &gt; 1 so that it may "map over" a list, Function or other
-object that satisfies the <a href="https://github.com/fantasyland/fantasy-land#apply">FantasyLand Apply spec</a>.</p>
+            <div class="description"><p>"提高"数量&gt; 1的一个函数使它可以“映射”一个列表、函数或者其他对象满足于<a href="https://github.com/fantasyland/fantasy-land#apply">FantasyLand适用规格</a>.</p>
 </div>
 
 
@@ -7573,15 +7521,13 @@ R.lte(<span class="hljs-string">'z'</span>, <span class="hljs-string">'a'</span>
 
             <p><small>Added in v0.1.0</small></p>
 
-            <div class="description"><p>Takes a function and
-a <a href="https://github.com/fantasyland/fantasy-land#functor">functor</a>,
-applies the function to each of the functor's values, and returns
-a functor of the same shape.</p>
-<p>Ramda provides suitable <code>map</code> implementations for <code>Array</code> and <code>Object</code>,
-so this function may be applied to <code>[1, 2, 3]</code> or <code>{x: 1, y: 2, z: 3}</code>.</p>
-<p>Dispatches to the <code>map</code> method of the second argument, if present.</p>
-<p>Acts as a transducer if a transformer is given in list position.</p>
-<p>Also treats functions as functors and will compose them together.</p>
+            <div class="description"><p>取得一个函数和一个<a href="https://github.com/fantasyland/fantasy-land#functor">函子</a>
+应用函数到每一个函子的值，并返回一个相同结构的函数。</p>
+<p>Ramda提供合适的<code>map</code> 用于<code>Array</code>和<code>Object</code>的实现，
+所以这个函数可以应用于<code>[1, 2, 3]</code>或者<code>{x: 1, y: 2, z: 3}</code>.</p>
+<p>在第二个参数调用<code>map</code>方法，如果存在的话。</p>
+<p>作为一个传感器如果变压器在列表位置。</p>
+<p>也将像函子一样处理函数，并将他们组合在一起。</p>
 </div>
 
 
@@ -7772,9 +7718,8 @@ R.mapAccumRight(append, <span class="hljs-number">0</span>, digits); <span class
 
             <p><small>Added in v0.9.0</small></p>
 
-            <div class="description"><p>An Object-specific version of <code>map</code>. The function is applied to three
-arguments: <em>(value, key, obj)</em>. If only the value is significant, use
-<code>map</code> instead.</p>
+            <div class="description"><p一个特定对象的<code>map</code>版本。该函数适用于三个参数：<em>(value, key, obj)</em>。如果只有值是有意义的，使用
+<code>map</code>代替。</p>
 </div>
 
 
@@ -8206,9 +8151,8 @@ count; <span class="hljs-comment">//=&gt; 1</span></code></pre>
 
             <p><small>Added in v0.1.0</small></p>
 
-            <div class="description"><p>Create a new object with the own properties of the first object merged with
-the own properties of the second object. If a key exists in both objects,
-the value from the second object will be used.</p>
+            <div class="description"><p>用第一个对象的属性和第二个对象的属性合并创建一个新对象。如果两个对象中都存在一个键，
+则将使用第二个对象的值。</p>
 </div>
 
 
@@ -8260,7 +8204,7 @@ resetToDefault({x: <span class="hljs-number">5</span>, y: <span class="hljs-numb
 
             <p><small>Added in v0.10.0</small></p>
 
-            <div class="description"><p>Merges a list of objects together into one object.</p>
+            <div class="description"><p>将一个对象的列表合并成一个对象。</p>
 </div>
 
 
@@ -9083,7 +9027,7 @@ R.of([<span class="hljs-number">42</span>]); <span class="hljs-comment">//=&gt; 
 
             <p><small>Added in v0.1.0</small></p>
 
-            <div class="description"><p>Returns a partial copy of an object omitting the keys specified.</p>
+            <div class="description"><p>返回一个删除指定的键对象的部分副本。</p>
 </div>
 
 
@@ -9533,7 +9477,7 @@ R.partition(R.contains(<span class="hljs-string">'s'</span>), { a: <span class="
 
             <p><small>Added in v0.2.0</small></p>
 
-            <div class="description"><p>Retrieve the value at a given path.</p>
+            <div class="description"><p>在一个给定的路径中检索值。</p>
 </div>
 
 
@@ -9763,8 +9707,7 @@ given predicate; <code>false</code> otherwise.</p>
 
             <p><small>Added in v0.1.0</small></p>
 
-            <div class="description"><p>Returns a partial copy of an object containing only the keys specified. If
-the key does not exist, the property is ignored.</p>
+            <div class="description"><p>返回只包含指定的键的一个对象的部分副本。如果键不存在，则忽略该属性。</p>
 </div>
 
 
@@ -9924,11 +9867,9 @@ R.pickBy(isUpperCase, {a: <span class="hljs-number">1</span>, b: <span class="hl
 
             <p><small>Added in v0.1.0</small></p>
 
-            <div class="description"><p>Performs left-to-right function composition. The leftmost function may have
-any arity; the remaining functions must be unary.</p>
-<p>In some libraries this function is named <code>sequence</code>.</p>
-<p><strong>Note:</strong> The result of pipe is not automatically curried.</p>
-</div>
+            <div class="description"><p>执行左到右的函数组合。最左边的函数可以有任意数量；其余的函数必须一元。</p>
+<p>在一些文档这个函数称为<code>sequence</code>。</p>
+<p><strong>注意：</strong>管道的结果不会自动柯里话</p></div>
 
 
 
@@ -10092,8 +10033,7 @@ must be unary.</p>
 
             <p><small>Added in v0.1.0</small></p>
 
-            <div class="description"><p>Returns a new list by plucking the same named property off all objects in
-the list supplied.</p>
+            <div class="description"><p>通过提取列表中所提供的所有对象的相同命名的属性，返回一个新的列表。</p>
 </div>
 
 
@@ -10300,9 +10240,7 @@ R.project([<span class="hljs-string">'name'</span>, <span class="hljs-string">'g
 
             <p><small>Added in v0.1.0</small></p>
 
-            <div class="description"><p>Returns a function that when supplied an object returns the indicated
-property of that object, if it exists.</p>
-</div>
+            <div class="description"><p>返回一个函数当提供一个对象并返回该对象的显示属性，如果存在的话。</p></div>
 
 
 
@@ -10653,7 +10591,7 @@ predicate; <code>false</code> otherwise.</p>
 
             <p><small>Added in v0.1.0</small></p>
 
-            <div class="description"><p>Returns a list of numbers from <code>from</code> (inclusive) to <code>to</code> (exclusive).</p>
+            <div class="description"><p>返回一个数列表从<code>from</code> (包括)到<code>to</code> (排除).</p>
 </div>
 
 
@@ -10710,17 +10648,12 @@ R.range(<span class="hljs-number">50</span>, <span class="hljs-number">53</span>
 
             <p><small>Added in v0.1.0</small></p>
 
-            <div class="description"><p>Returns a single item by iterating through the list, successively calling
-the iterator function and passing it an accumulator value and the current
-value from the array, and then passing the result to the next call.</p>
-<p>The iterator function receives two values: <em>(acc, value)</em>. It may use
-<code>R.reduced</code> to shortcut the iteration.</p>
-<p>Note: <code>R.reduce</code> does not skip deleted or unassigned indices (sparse
-arrays), unlike the native <code>Array.prototype.reduce</code> method. For more details
-on this behavior, see:
+            <div class="description"><p>返回单个项目通过循环访问列表，连续调用迭代函数并传递一个累加值和数组中的当前值，然后 传递结果到下一个调用</p>
+<p>迭代函数接收两个值：<em>(acc, value)</em>。它可以使用<code>R.reduced</code>来快捷迭代。</p>
+<p>注意：<code>R.reduce</code>不跳过删除或者未分配的指数(稀疏矩阵
+数组)，不像本地的<code>Array.prototype.reduce</code>方法。对于这种行为，更多详情见：
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce#Description">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce#Description</a></p>
-<p>Dispatches to the <code>reduce</code> method of the third argument, if present.</p>
-</div>
+<p>在第三个参数调用<code>reduce</code>方法，如果存在的话</p></div>
 
 
 
@@ -11185,7 +11118,7 @@ the list with the changes.
 
             <p><small>Added in v0.1.1</small></p>
 
-            <div class="description"><p>Returns a fixed list of size <code>n</code> containing a specified identical value.</p>
+            <div class="description"><p>返回一个固定大小的列表<code>n</code> 包含相同的指定值。</p>
 </div>
 
 
@@ -11585,11 +11518,7 @@ R.slice(<span class="hljs-number">0</span>, <span class="hljs-number">3</span>, 
 
             <p><small>Added in v0.1.0</small></p>
 
-            <div class="description"><p>Returns a copy of the list, sorted according to the comparator function,
-which should accept two values at a time and return a negative number if the
-first value is smaller, a positive number if it's larger, and zero if they
-are equal. Please note that this is a <strong>copy</strong> of the list. It does not
-modify the original.</p>
+            <div class="description"><p>返回一个列表的副本，sorted根据比较函数，它应该一次接受两个值并返回一个负数，如果第一个值比较小；返回一个正数如果它更大；或者返回零，如果它们相等。请注意：这是<strong>复制</strong>列表。并不修改原值。</p>
 </div>
 
 
@@ -11638,8 +11567,7 @@ R.sort(diff, [<span class="hljs-number">4</span>,<span class="hljs-number">2</sp
 
             <p><small>Added in v0.1.0</small></p>
 
-            <div class="description"><p>Sorts the list according to the supplied function.</p>
-</div>
+            <div class="description"><p>根据所提供的函数对列表排序。</p></div>
 
 
 
@@ -12499,7 +12427,7 @@ R.takeWhile(isNotFour, [<span class="hljs-number">1</span>, <span class="hljs-nu
 
             <p><small>Added in v0.1.0</small></p>
 
-            <div class="description"><p>Runs the given function with the supplied object, then returns the object.</p>
+            <div class="description"><p>用所提供的对象运行给定的函数，然后返回对象。</p>
 </div>
 
 
@@ -12694,10 +12622,8 @@ and is gradually incremented to <code>n - 1</code>.</p>
 
             <p><small>Added in v0.4.0</small></p>
 
-            <div class="description"><p>Converts an object into an array of key, value arrays. Only the object's
-own properties are used.
-Note that the order of the output array is not guaranteed to be consistent
-across different JS platforms.</p>
+            <div class="description"><p>将一个对象转换成一个数组的键，值数组。只有对象自己的属性被使用。
+注意，输出数组的顺序在不同的JS平台不能保证是一致的</p>
 </div>
 
 
@@ -13590,8 +13516,7 @@ R.unionWith(R.eqBy(R.prop(<span class="hljs-string">'a'</span>)), l1, l2); <span
 
             <p><small>Added in v0.1.0</small></p>
 
-            <div class="description"><p>Returns a new list containing only one copy of each element in the original
-list. <code>R.equals</code> is used to determine equality.</p>
+            <div class="description"><p>返回一个新的列表，只包含原始列表中的每个元素的一个副本。<code>R.equals</code>用于确定等式。</p>
 </div>
 
 
@@ -14039,9 +13964,8 @@ R.useWith(<span class="hljs-built_in">Math</span>.pow, [R.dec, R.inc])(<span cla
 
             <p><small>Added in v0.1.0</small></p>
 
-            <div class="description"><p>Returns a list of all the enumerable own properties of the supplied object.
-Note that the order of the output array is not guaranteed across different
-JS platforms.</p>
+            <div class="description"><p>返回一个提供所有可枚举属性的对象的列表。
+注意，输出数组的顺序在不同的JS平台不能保证是一致的</p>
 </div>
 
 
@@ -14560,11 +14484,8 @@ from the lists.</p>
 
             <p><small>Added in v0.1.0</small></p>
 
-            <div class="description"><p>Creates a new list out of the two supplied by pairing up equally-positioned
-items from both lists. The returned list is truncated to the length of the
-shorter of the two input lists.
-Note: <code>zip</code> is equivalent to <code>zipWith(function(a, b) { return [a, b] })</code>.</p>
-</div>
+            <div class="description"><p>通过将两个列表中的同样位置的项目配对起来，创建一个新的列表。返回的列表是截断至两个列表中长度较短的输入列表.
+注意：<code>zip</code>相当于<code>zipWith(function(a, b) { return [a, b] })</code>.</p></div>
 
 
 
